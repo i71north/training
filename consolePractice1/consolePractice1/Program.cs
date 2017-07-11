@@ -10,11 +10,11 @@ namespace consolePractice1
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("What is your name?");
-            //string dude = Console.ReadLine();
+            Console.WriteLine("What is your name?");
+            string dude = Console.ReadLine();
 
-            //Console.WriteLine($"My name is {dude}");
-            //Console.ReadLine();
+            Console.WriteLine($"My name is {dude}");
+            Console.ReadLine();
 
             Console.WriteLine("What is your age?");
             string age = Console.ReadLine();
