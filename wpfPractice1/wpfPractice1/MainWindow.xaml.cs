@@ -50,8 +50,8 @@ namespace wpfPractice1
     
         private void btnThree_Click(object sender, RoutedEventArgs e)
         {
-            winThree sec = new winThree();
-            sec.ShowDialog();
+            winThree trey = new winThree();
+            trey.ShowDialog();
         }
     }
 }
