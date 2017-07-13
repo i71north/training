@@ -33,10 +33,14 @@ namespace switchPractice2
             Console.WriteLine("Exit Loop");
             Console.ReadLine();
 
+            
             Console.WriteLine("What will you name your new puppy? \n 1. Lassie \n 2. Baxter \n 3. Roxie");
-            int name = Convert.ToInt32(Console.ReadLine().ToLower());
+            //int name = Convert.ToInt32(Console.ReadLine().ToLower());
+            string name = Console.ReadLine();
+            int puppyName;
+            int.TryParse(name, out puppyName);
 
-            switch (name)
+            switch (puppyName)
             {
                 case 1:
                     Console.WriteLine("Lassie was a TV show back in the day.");
