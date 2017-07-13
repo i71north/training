@@ -34,14 +34,15 @@ namespace switchPractice1
             Console.ReadLine();
 
 
-            
+            bool yes;
             int foodLike;
             Console.WriteLine("What is your favorite pasta dish? \n 1. Lasagne \n 2. Spaghetti \n 3. Ravioli");
             //int foodChoice = Convert.ToInt32(Console.ReadLine().ToUpper());
             string foodChoice = Console.ReadLine();
             //int foodChoice = int.Parse(ReadLine());
-            int.TryParse(foodChoice, out foodLike);
-            //double food = Convert.ToDouble(ReadLine().ToUpper());
+            int.TryParse(foodChoice, out foodLike); //only with number choices, protects from random entries. declare foodlike as an int so that text can be entered as well.
+            //parse is validation. idiotproof, always a good ideal to use.
+            //double food = Convert.ToDouble(ReadLine().ToUpper()); Cannot use double when using a switch
                     
 
             switch (foodLike)
