@@ -1,0 +1,16 @@
+﻿<Window x:Class="wpfPractice1.winThree"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfPractice1"
+        mc:Ignorable="d"
+        Title="winThree" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="lblSummer" Content="Summer Begins in June" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="206" FontFamily="Arial Rounded MT Bold" FontSize="16"/>
+        <Label x:Name="lblSpring" Content="Spring Begins in March" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="206" FontFamily="Arial Rounded MT Bold" FontSize="16"/>
+        <Label x:Name="lblFall" Content="Fall Begins in September" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="206" FontFamily="Arial Rounded MT Bold" FontSize="16"/>
+        <Label x:Name="lblWinter" Content="Winter Begins in December" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="16"/>
+
+    </Grid>
+</Window>
