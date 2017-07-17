@@ -37,6 +37,14 @@ namespace loopPractice2
                 Console.WriteLine("The values of the letters array are "+ (letters[m]));
             }
             Console.ReadLine();
+
+            for (int m = 0; m < letters.Length; ++m)
+
+            { 
+                Console.Write((letters[m]));
+            }
+            Console.ReadLine();
+
         }
 
         
