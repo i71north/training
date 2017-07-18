@@ -15,8 +15,8 @@ namespace loopArraysum1
             for (int q = 0; q < nums.Length; ++q)
            
             {
-                //Console.WriteLine($"The value of q currently is {(nums[q])}");
-                total += nums[q];
+                Console.WriteLine($"The value of q currently is {(nums[q])}");
+                total += nums[q]; //<--- this is all what you really need right here.
             }
             Console.WriteLine($"The total value of the nums array is {total}");
             Console.ReadLine();
