@@ -19,12 +19,12 @@ namespace whileLooppractice1
             Console.WriteLine("What is your password?");
             string pw = Console.ReadLine();
 
-            //while (inputName != userName || pw != password)
-            //{
-            //    Console.WriteLine("The combination that you entered was not correct.");
-            //    Console.WriteLine("Sorry, please try again");
-            //    inputName = Console.ReadLine();
-            //    pw = Console.ReadLine();
+            while (inputName != userName || pw != password)
+            {
+                Console.WriteLine("The combination that you entered was not correct.");
+                Console.WriteLine("Sorry, please try again");
+                inputName = Console.ReadLine();
+                pw = Console.ReadLine();
             }
             Console.WriteLine("Username and password are both correct...Hooray!");
             Console.ReadKey();
