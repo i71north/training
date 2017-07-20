@@ -56,9 +56,8 @@ namespace MethodPractice2
         public void Division(int val1, int val2)
         {
             int quotient = val1 / val2;
-            int remainder = val1 % val2;
 
-            Console.WriteLine($"The quotient of {val1} and {val2} is {quotient}.{remainder}");
+            Console.WriteLine($"The quotient of {val1} and {val2} is {quotient}");
         }
     }
 }

@@ -17,5 +17,10 @@ namespace guessingGame
         {
             Console.WriteLine("Sandal & Atlantis are both here");
         }
+
+        public static void Smart()
+        {
+            Console.WriteLine("Class is where we learn fun things");
+        }
     }
 }
