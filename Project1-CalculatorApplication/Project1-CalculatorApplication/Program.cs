@@ -20,45 +20,66 @@ namespace Project1_CalculatorApplication
             Program p = new Program();
 
             int options;
-            Console.WriteLine("Which type mathmatical operation would you like the calculator to perform? \n (+) Addition \n (-) Subtraction \n (*) Multiplication \n (/) Division");
+            Console.WriteLine("Which type mathmatical operation would you like the calculator to perform? \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division");
             string select = Console.ReadLine();
             int.TryParse(select, out options);
-
-            int num1;
-            int num2;
-            Console.WriteLine("Enter your first number");
-            string first = Console.ReadLine();
-            int.TryParse(first, out num1);
-
-            Console.WriteLine("Enter your second number");
-            string second = Console.ReadLine();
-            int.TryParse(second, out num2);
-
-            Console.ReadLine();
-
-
 
             switch ((CalcOptions)options)
             {
                 case CalcOptions.Addition:
-                    p.Plus(num1, num2);
                     break;
 
                 case CalcOptions.Subtraction:
-                    p.Minus(num1, num2);
                     break;
 
                 case CalcOptions.Multiplication:
-                    Times();
                     break;
 
                 case CalcOptions.Divison:
-                    Divide();
+                    break;
+
+                default:
+
+                    Console.WriteLine("That is not a vaild selection. \nTry again.");
                     break;
             }
+           
+
+            int num1;
+            int num2;
+
+            Console.WriteLine("Enter your first number");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            string first = Console.ReadLine();
+            int.TryParse(first, out num1);
+
+            while (num1 <= 0)
+            {
+                Console.WriteLine($"{num1} is not a vaild entry");
+            }
+
+
+            Console.WriteLine("Enter your second number");
+            string second = Console.ReadLine();
+            int.TryParse(second, out num2);
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            while (num2 <= 0)
+            {
+                Console.WriteLine($"{num2} is not a vaild entry");
+            }
+
+            Console.ReadLine();
+
+            
+        }
+        public void Calculate()
+        {
+            
+
+            
 
         }
-
         public void Plus(int num1, int num2)
         {
             int sum = num1 + num2;
@@ -73,16 +94,38 @@ namespace Project1_CalculatorApplication
             Console.WriteLine($"The difference of {num1} and {num2} is {difference}");
         }
 
+        public void Times(int val1, int val2)
+        {
+            int product = val1 * val2;
 
+            Console.WriteLine($"The product of {val1} and {val2} is {product}");
+        }
 
+        public void Divide(int val1, int val2)
+        {
+            int quotient = val1 / val2;
 
-
-
-
-
+            Console.WriteLine($"The quotient of {val1} and {val2} is {quotient}");
+        }
 
 
 
 
     }
+   
+
 }
+
+        
+
+          
+
+
+
+
+
+
+
+
+    
+
