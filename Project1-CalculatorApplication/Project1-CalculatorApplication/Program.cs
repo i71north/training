@@ -15,7 +15,7 @@ namespace Project1_CalculatorApplication
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Program p = new Program();
 
@@ -30,7 +30,7 @@ namespace Project1_CalculatorApplication
             string first = Console.ReadLine();
             int.TryParse(first, out num1);
 
-            while (num1 <= 1)
+            while (num1 <= 0)
             {
                 Console.WriteLine($"{num1} is not a vaild entry");
             }
@@ -40,12 +40,10 @@ namespace Project1_CalculatorApplication
             string second = Console.ReadLine();
             int.TryParse(second, out num2);
 
-            while (num2 <= 1)
+            while (num2 <= 0)
             {
                 Console.WriteLine($"{num2} is not a vaild entry");
             }
-
-            Console.ReadLine();
 
             switch ((CalcOptions)options)
             {
@@ -70,37 +68,52 @@ namespace Project1_CalculatorApplication
                     Console.WriteLine("That is not a vaild selection. \nTry again.");
                     break;
             }
-            Console.ReadLine();
-            Console.WriteLine("Would you like to start again? \n1. Yes \n2. No");
-            Console.ReadLine();
+
+            string answer1 = "yes";
+            string answer2 = "no";
+
+            Console.WriteLine("Would you like to start again? ");
+            string input = Console.ReadLine();
+
+            while (input == answer1)
+            {
+                Console.WriteLine("Press enter to continue.");
+                input = Console.ReadLine();
+                Main();
+            }
+            while (input == answer2)
+            {
+                Console.WriteLine("Goodbye.");
+                input = Console.ReadLine();
+            }
         }
 
         public void Plus(int num1, int num2)
         {
             int sum = num1 + num2;
 
-            Console.WriteLine($"The sum of {num1} and {num2} is {sum}");
+            Console.WriteLine($"{num1} + {num2} = {sum}");
         }
 
         public void Minus(int num1, int num2)
         {
             int difference = num1 - num2;
 
-            Console.WriteLine($"The difference of {num1} and {num2} is {difference}");
+            Console.WriteLine($"{num1} - {num2} = {difference}");
         }
 
         public void Times(int val1, int val2)
         {
             int product = val1 * val2;
 
-            Console.WriteLine($"The product of {val1} and {val2} is {product}");
+            Console.WriteLine($"{val1} * {val2} = {product}");
         }
 
         public void Divide(int val1, int val2)
         {
             int quotient = val1 / val2;
 
-            Console.WriteLine($"The quotient of {val1} and {val2} is {quotient}");
+            Console.WriteLine($"{val1} / {val2} = {quotient}");
         }
     }
   
