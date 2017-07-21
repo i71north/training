@@ -24,36 +24,13 @@ namespace Project1_CalculatorApplication
             string select = Console.ReadLine();
             int.TryParse(select, out options);
 
-            switch ((CalcOptions)options)
-            {
-                case CalcOptions.Addition:
-                    break;
-
-                case CalcOptions.Subtraction:
-                    break;
-
-                case CalcOptions.Multiplication:
-                    break;
-
-                case CalcOptions.Divison:
-                    break;
-
-                default:
-
-                    Console.WriteLine("That is not a vaild selection. \nTry again.");
-                    break;
-            }
-           
-
-            int num1;
-            int num2;
-
+            int num1 = 1;
+            int num2 = 1;
             Console.WriteLine("Enter your first number");
-            num1 = Convert.ToInt32(Console.ReadLine());
             string first = Console.ReadLine();
             int.TryParse(first, out num1);
 
-            while (num1 <= 0)
+            while (num1 <= 1)
             {
                 Console.WriteLine($"{num1} is not a vaild entry");
             }
@@ -62,24 +39,42 @@ namespace Project1_CalculatorApplication
             Console.WriteLine("Enter your second number");
             string second = Console.ReadLine();
             int.TryParse(second, out num2);
-            num2 = Convert.ToInt32(Console.ReadLine());
 
-            while (num2 <= 0)
+            while (num2 <= 1)
             {
                 Console.WriteLine($"{num2} is not a vaild entry");
             }
 
             Console.ReadLine();
 
-            
-        }
-        public void Calculate()
-        {
-            
+            switch ((CalcOptions)options)
+            {
+                case CalcOptions.Addition:
+                    p.Plus(num1, num2);
+                    break;
 
-            
+                case CalcOptions.Subtraction:
+                    p.Minus(num1, num2);
+                    break;
 
+                case CalcOptions.Multiplication:
+                    p.Times(num1, num2);
+                    break;
+
+                case CalcOptions.Divison:
+                    p.Divide(num1, num2);
+                    break;
+
+                default:
+
+                    Console.WriteLine("That is not a vaild selection. \nTry again.");
+                    break;
+            }
+            Console.ReadLine();
+            Console.WriteLine("Would you like to start again? \n1. Yes \n2. No");
+            Console.ReadLine();
         }
+
         public void Plus(int num1, int num2)
         {
             int sum = num1 + num2;
@@ -107,18 +102,13 @@ namespace Project1_CalculatorApplication
 
             Console.WriteLine($"The quotient of {val1} and {val2} is {quotient}");
         }
-
-
-
-
     }
-   
-
+  
 }
+       
 
-        
 
-          
+
 
 
 
