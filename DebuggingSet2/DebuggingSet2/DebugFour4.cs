@@ -9,7 +9,7 @@ using System;
 using static System.Console;
 class DebugFour4
 {
-   static void Main()
+   public void Four4()
    {
       double sales, commission;
       string inputString;
@@ -25,14 +25,16 @@ class DebugFour4
       sales = Convert.ToDouble(inputString);
       commission = LOWPCT * sales;
       if(sales <= LOWSALES)
-        commission += (sales - LOWSALES) * MEDPCT;
+        commission = sales * LOWPCT;
       else
-        if(sales == MEDSALES)
-           commission += BONUS1;
+        if(sales <= MEDSALES)
+           commission = (1000 * LOWPCT) + (sales - 1000) * (MEDPCT + LOWPCT);
          else
            if(sales > HIGHSALES)
-             commission = BONUS2; 
-      WriteLine("Sales: {0}\nCommission: {1}",
+            commission = (1000 * LOWPCT) + (sales - 1000) * (MEDPCT + LOWPCT) + BONUS1 + BONUS2;
+
+        WriteLine("Sales: {0}\nCommission: {1}",
         sales.ToString("C"), commission.ToString("C"));
+        Console.ReadLine(); // add readline
   }
 }

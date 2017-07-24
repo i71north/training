@@ -19,16 +19,16 @@ namespace MethodOverloadingPractice1
             Console.WriteLine("Give me a second number to work with.");
             string secondNum = Console.ReadLine();
 
-            //Console.WriteLine("Give me a double to work with.");
-            //string secondDouble = Console.ReadLine();
+            Console.WriteLine("Give me a double to work with.");
+            string secondDouble = Console.ReadLine();
 
             int.TryParse(firstNum, out firstRealNumber);
             int.TryParse(secondNum, out secondRealNumber);
-            //double.TryParse(secondDouble, out firstDouble);
+            double.TryParse(secondDouble, out firstDouble);
 
-            //MultiplyIntegers();
-            //MultiplyIntegers(firstRealNumber);
-            //MultiplyIntegers(firstDouble);
+            MultiplyIntegers();
+            MultiplyIntegers(firstRealNumber);
+            MultiplyIntegers(firstDouble);
             MultiplyIntegers(firstRealNumber, secondRealNumber);
         }
 
